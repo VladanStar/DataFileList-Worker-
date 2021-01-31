@@ -3,6 +3,7 @@ package com.company;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,7 +15,9 @@ public class Main {
         List<Radnik> radnici =ucitajRadnike(imeDatoteke);
         for(Radnik radnik : radnici){
             System.out.println(radnik);
+            upisiUFajl(radnici);
         }
+
         // write your code here
 
     }
@@ -47,6 +50,24 @@ public class Main {
                 e.printStackTrace();
             }
             return radnici;
+        }
+        public static  void upisiUFajl(List<Radnik> radnici){
+            try {
+                PrintWriter printer = new PrintWriter("output.txt");
+                printer.println("lista radnika");
+                for(Radnik r : radnici){
+                    printer.println(r);
+                }
+                printer.flush();
+                printer.close();
+                System.out.println("Uspesan upis u datoteku");
+
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+
         }
 
 

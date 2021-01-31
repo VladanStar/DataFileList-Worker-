@@ -1,0 +1,5 @@
+lista radnika
+Radnik{ime='Vladan Cupric', jmbg=1103973721019, stza=10, plata=450000.0}
+Radnik{ime='Jovan Jovanovic', jmbg=1503973721019, stza=12, plata=60000.0}
+Radnik{ime='Filip Mali', jmbg=23013973721019, stza=7, plata=69000.0}
+Radnik{ime='Jovan Kovrlija', jmbg=2309973721019, stza=4, plata=48000.0}
